@@ -116,3 +116,23 @@ License:
 
 All LJM Python modules and examples are licensed under MIT X11. The license can
 be found in the LICENSE.TXT file.
+
+# -------------- 20250131 Notes on linux testing ----------# 
+
+I get a warning about libLabJackM.so not found
+To fix this I had to go to:
+https://files.labjack.com/installers/LJM/Linux/x64/release/
+and download 	LabJack-LJM_2024-06-10.zip
+
+then I see:
+(base) kkappler@kkappler-750-247c:~/Downloads/LabJack-LJM_2024-06-10$ ls -lh
+total 156M
+-rw-rw-r-- 1 kkappler kkappler  531 Jun 10  2024 INSTALL.md
+-rwxrwxr-x 1 kkappler kkappler 156M Jun 10  2024 labjack_ljm_installer.run
+
+so a 156M file, I need to run
+sudo ./labjack_ljm_installer.run per the INSTALL.md
+
+Then I can stream the example data from 
+https://files.labjack.com/examples/t7_logging_demo.py
+
